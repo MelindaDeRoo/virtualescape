@@ -1,0 +1,48 @@
+@mixin inputFields {
+  background-color: #000;
+  border: 2px solid #149414;
+  border-radius: 10px;
+  color: #149414;
+  font-size: 1.25rem;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80%;
+  margin: 0 4rem;
+
+  label {
+      margin-bottom: 0.5rem;
+      color: #149414;
+      font-size: 1.25rem;
+  }
+
+  input {
+    @include inputFields;
+    height: 48px;
+    margin-bottom: 0.25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  input:focus-visible {
+      outline: none;
+  }
+
+  button {
+    @include inputFields;
+    height: 64px;
+    margin: 2rem 3rem 4rem;
+  }
+}
+
+.errors {
+    span {
+        font-size: 0.75rem;
+        color: #ff2200;
+    }
+}

@@ -1,0 +1,10 @@
+<div class="container" [formGroup]="choiceForm">
+  <label for="team">Teamnaam:</label>
+  <input name="team" formControlName="team" type="text" />
+
+  <div *ngIf="choiceForm.invalid && hasBeenSubmitted" class="errors">
+    <span *ngIf="choiceForm.controls['team'].errors?.required">Vul een teamnaam in.</span>
+  </div>
+
+  <button (click)="onStart()">Ga verder</button>
+</div>
