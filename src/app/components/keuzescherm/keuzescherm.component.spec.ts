@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { KeuzeschermComponent } from './keuzescherm.component';
 
@@ -6,7 +6,7 @@ describe('KeuzeschermComponent', () => {
   let component: KeuzeschermComponent;
   let fixture: ComponentFixture<KeuzeschermComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ KeuzeschermComponent ]
     })
