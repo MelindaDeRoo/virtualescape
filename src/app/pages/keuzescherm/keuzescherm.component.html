@@ -1,9 +1,15 @@
+<div class="header">
+  <h1>Bontekoe Escape</h1>
+</div>
+
 <div class="container" [formGroup]="choiceForm">
   <label for="team">Teamnaam:</label>
   <input name="team" formControlName="team" type="text" />
 
   <div *ngIf="choiceForm.invalid && hasBeenSubmitted" class="errors">
-    <span *ngIf="choiceForm.controls['team'].errors?.required">Vul een teamnaam in.</span>
+    <span *ngIf="choiceForm.controls['team'].errors?.required" class="error-message"
+      >Vul een teamnaam in.</span
+    >
   </div>
 
   <button (click)="onStart()">Ga verder</button>

@@ -8,41 +8,33 @@
 }
 
 .container {
-  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 80%;
-  margin: 0 4rem;
+  margin: 1.25rem;
 
-  label {
-      margin-bottom: 0.5rem;
-      color: #149414;
-      font-size: 1.25rem;
+  span:not(.error-message) {
+    margin-bottom: 1rem;
+    color: #149414;
+    text-align: justify;
   }
 
   input {
     @include inputFields;
     height: 48px;
-    margin-bottom: 0.25rem;
+    margin: 4rem 2rem 0.25rem;
     padding-left: 1rem;
     padding-right: 1rem;
   }
 
   input:focus-visible {
-      outline: none;
+    outline: none;
   }
 
   button {
     @include inputFields;
-    height: 64px;
-    margin: 2rem 3rem 4rem;
+    height: 48px;
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    margin: 1rem auto 1.25rem;
   }
-}
-
-.errors {
-    span {
-        font-size: 0.75rem;
-        color: #ff2200;
-    }
 }

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { Select, Store } from '@ngxs/store';
+import { AddTeam } from '../../store/actions/team.action';
 
 @Component({
   selector: 'app-keuzescherm',
@@ -10,7 +13,11 @@ export class KeuzeschermComponent implements OnInit {
   choiceForm: FormGroup;
   hasBeenSubmitted: boolean;
 
-  constructor(private fb: FormBuilder) {}
+  constructor(
+    private fb: FormBuilder,
+    private store: Store,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.choiceForm = this.fb.group({
@@ -22,9 +29,10 @@ export class KeuzeschermComponent implements OnInit {
   onStart(): void {
     this.hasBeenSubmitted = true;
     if (this.choiceForm.valid) {
-      console.log('Valid');
-    } else {
-      console.log('Invalid');
+      this.store.dispatch(
+        new AddTeam({ team: this.choiceForm.controls['team'].value })
+      );
     }
+    this.router.navigate(['/intro']);
   }
 }

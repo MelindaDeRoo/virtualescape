@@ -1,0 +1,72 @@
+<div class="container" [formGroup]="puzzelForm">
+  <span>
+    Eenmaal weer terug in het hoofdgebouw met de nieuwe informatie die verkregen
+    is op de gemarkeerde locatie, begint het vervolg naar het mysterie.
+  </span>
+  <div class="coordinates">
+    <input
+      type="number"
+      formControlName="part1"
+      (focus)="onFocusChange()"
+    />
+    <span>&deg;</span>
+    <input
+      type="number"
+      formControlName="part2"
+      (focus)="onFocusChange()"
+    />
+    <span>'</span>
+    <input
+      type="number"
+      formControlName="part3"
+      (focus)="onFocusChange()"
+    />
+    <span>.</span>
+    <input
+      type="number"
+      formControlName="part4"
+      (focus)="onFocusChange()"
+    />
+    <span>"</span>
+    <span>N</span>
+  </div>
+  <div class="coordinates">
+    <input
+      type="number"
+      formControlName="part5"
+      (focus)="onFocusChange()"
+    />
+    <span>&deg;</span>
+    <input
+      type="number"
+      formControlName="part6"
+      (focus)="onFocusChange()"
+    />
+    <span>'</span>
+    <input
+      type="number"
+      formControlName="part7"
+      (focus)="onFocusChange()"
+    />
+    <span>.</span>
+    <input
+      type="number"
+      formControlName="part8"
+      (focus)="onFocusChange()"
+    />
+    <span>"</span>
+    <span>E</span>
+  </div>
+  <div *ngIf="puzzelForm.invalid && hasBeenSubmitted" class="errors">
+    <span
+      *ngIf="
+        puzzelForm.controls['code1'].errors?.required ||
+        puzzelForm.controls['code1'].errors?.invalidCode
+      "
+      class="error-message"
+    >
+      De code is incorrect.
+    </span>
+  </div>
+  <button (click)="onSubmit()">Ga verder</button>
+</div>

@@ -1,0 +1,24 @@
+<div class="container" [formGroup]="introForm">
+  <span>Goedendag {{ team }},</span>
+  <span>
+    Na deze lange zoektocht, die vier jaren heeft geduurd, zijn jullie als
+    uitverkorenen samengekomen in het onderzoek naar de mysterieuze box.
+    Wetenschappers zijn jullie voor gegaan om de afkomst te bepalen, wat leidde
+    naar deze plek. De box, afkomstig uit het jaar zeven, was gemaakt door een
+    geheim genootschap. Iedere poging om dichterbij de box te komen, zorgde
+    ervoor dat het genootschap verdween als sneeuw voor de zon. Tot op heden is
+    het nog niemand gelukt om de box te openen.
+  </span>
+  <span>
+    In een team van zes, zullen jullie de geheimen van deze box ontrafelen, en
+    de codes te kraken. Slagen jullie er in om het mysterie in een keer op te
+    lossen?
+  </span>
+  <input type="number" formControlName="code1" (focus)="onFocusChange()" />
+  <div *ngIf="introForm.invalid && hasBeenSubmitted" class="errors">
+    <span *ngIf="introForm.controls['code1'].errors?.required || introForm.controls['code1'].errors?.invalidCode" class="error-message">
+      De code is incorrect.
+    </span>
+  </div>
+  <button (click)="onSubmit()">Ga verder</button>
+</div>
