@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: 'intro', component: IntroComponent },
   { path: 'puzzel1', component: Puzzel1Component },
   { path: 'puzzel2', component: Puzzel2Component },
-  { path: '*', redirectTo: '/keuze', pathMatch: 'full' },
+  { path: '', redirectTo: '/keuze', pathMatch: 'full' },
 ];
 
 @NgModule({
