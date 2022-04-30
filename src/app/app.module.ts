@@ -13,6 +13,8 @@ import { KeuzeschermComponent } from './pages/keuzescherm/keuzescherm.component'
 import { IntroComponent } from './pages/intro/intro.component';
 import { Puzzel1Component } from './pages/puzzel1/puzzel1.component';
 import { Puzzel2Component } from './pages/puzzel2/puzzel2.component';
+import { Puzzel3Component } from './pages/puzzel3/puzzel3.component';
+import { CreditsComponent } from './pages/credits/credits.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { Puzzel2Component } from './pages/puzzel2/puzzel2.component';
     KeuzeschermComponent,
     IntroComponent,
     Puzzel1Component,
-    Puzzel2Component
+    Puzzel2Component,
+    Puzzel3Component,
+    CreditsComponent
   ],
   imports: [
     BrowserModule,

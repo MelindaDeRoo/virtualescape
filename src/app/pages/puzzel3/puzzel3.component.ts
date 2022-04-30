@@ -9,11 +9,11 @@ import {
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-puzzel2',
-  templateUrl: './puzzel2.component.html',
-  styleUrls: ['./puzzel2.component.scss'],
+  selector: 'app-puzzel3',
+  templateUrl: './puzzel3.component.html',
+  styleUrls: ['./puzzel3.component.scss'],
 })
-export class Puzzel2Component implements OnInit {
+export class Puzzel3Component implements OnInit {
   hasBeenSubmitted: boolean;
   puzzelForm: FormGroup;
 
@@ -34,14 +34,13 @@ export class Puzzel2Component implements OnInit {
   onSubmit(): void {
     this.hasBeenSubmitted = true;
     if (this.puzzelForm.valid) {
-      this.router.navigate(['puzzel3']);
+      this.router.navigate(['credits']);
     }
   }
 }
 
-//52°32'59.5"N 6°33'36.6"E
 export function validateCode(): ValidatorFn {
   return (control: AbstractControl) => {
-    return control.value === '3672' ? null : { invalidCode: true };
+    return control.value === '7491' ? null : { invalidCode: true };
   };
 }

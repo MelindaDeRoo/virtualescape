@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 1.25rem;
+  height: 100%;
+
+  span {
+    margin-bottom: 2rem;
+    color: #149414;
+    text-align: justify;
+
+    &:last-of-type {
+      position: absolute;
+      bottom: 0;
+      font-size: 0.5rem;
+    }
+  }
+}

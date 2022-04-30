@@ -12,6 +12,10 @@
   flex-direction: column;
   margin: 1.25rem;
 
+  span:first-of-type {
+    margin-bottom: 2rem;
+  }
+
   span:not(.error-message) {
     color: #149414;
     text-align: justify;
@@ -24,7 +28,7 @@
   input {
     @include inputFields;
     height: 48px;
-    margin: 0 2rem 0.25rem;
+    margin: 2rem 2rem 0.25rem;
     padding-left: 1rem;
     padding-right: 1rem;
   }

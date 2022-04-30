@@ -1,12 +1,14 @@
 <div class="container" [formGroup]="puzzelForm">
-  <span><strong>Wetenschappers</strong></span>
+  <span><strong>Coordinaten</strong></span>
   <span>
-    Eenmaal weer terug in het hoofdgebouw met de nieuwe informatie die verkregen
-    is op de gemarkeerde locatie, begint het vervolg naar het mysterie. In
-    vorige pogingen hebben verschillende wetenschappers video's opgenomen waarin
-    ze iets uitbeelden, dat mogelijk zou kunnen leiden naar de ontrafeling.
-    Misschien hebben jullie daar iets aan?
+    Het einde lijkt in zicht. De laatste hint hebben jullie weten te
+    ontcijferen. Het mysterie is bijna opgelost. Er dwarrelt een briefje op de
+    grond voor jullie voeten. Daarop staan coordinaten geschreven. Met deze
+    laatste hint zal het mysterie snel opgelost zijn. En kan de geheimzinnige
+    box eindelijk geopend worden.
   </span>
+  <span><i>52°32'59.5"N</i></span>
+  <span><i>6°33'36.6"E</i></span>
   <input type="number" formControlName="code" (focus)="onFocusChange()" />
   <div *ngIf="puzzelForm.invalid && hasBeenSubmitted" class="errors">
     <span
