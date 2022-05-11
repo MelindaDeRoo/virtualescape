@@ -40,8 +40,6 @@ export class Puzzel2Component implements OnInit {
 }
 
 //52°32'59.5"N 6°33'36.6"E
-export function validateCode(): ValidatorFn {
-  return (control: AbstractControl) => {
-    return control.value === '3672' ? null : { invalidCode: true };
-  };
+export function validateCode(control: AbstractControl) {
+  return control.value === 3672 ? null : { invalidCode: true };
 }

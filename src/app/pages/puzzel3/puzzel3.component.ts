@@ -39,8 +39,6 @@ export class Puzzel3Component implements OnInit {
   }
 }
 
-export function validateCode(): ValidatorFn {
-  return (control: AbstractControl) => {
-    return control.value === '7491' ? null : { invalidCode: true };
-  };
+export function validateCode(control: AbstractControl) {
+  return control.value === 7491 ? null : { invalidCode: true };
 }
