@@ -59,5 +59,5 @@ export class IntroComponent implements OnInit, OnDestroy {
 }
 
 export function validateCode1(control: AbstractControl) {
-  return control.value === 4761 ? null : { invalidCode: true };
+  return control.value === 4751 ? null : { invalidCode: true };
 }
